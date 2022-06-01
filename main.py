@@ -56,6 +56,7 @@ async def join(ctx):
         return
     else:
         channel = ctx.message.author.voice.channel
+        await ctx.send("{} is connected to a voice channel".format(ctx.message.author.name))
     await channel.connect()
 
 @bot.command(name='leave', help='To make the bot leave the voice channel')
